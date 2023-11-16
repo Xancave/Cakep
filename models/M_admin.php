@@ -14,29 +14,29 @@ class M_admin extends CI_Model
     return $query->result();
   }
 
-  public function cek_jumlah($tabel,$id_transaksi)
+  public function cek_jumlah($tabel,$Jidno)
   {
     return  $this->db->select('*')
                ->from($tabel)
-               ->where('id_transaksi',$id_transaksi)
+               ->where('Jidno',$Jidno)
                ->get();
 
   }
 
-  public function get_data_array($tabel,$id_transaksi)
+  public function get_data_array($tabel,$Jidno)
   {
     $query = $this->db->select()
                       ->from($tabel)
-                      ->where($id_transaksi)
+                      ->where($Jidno)
                       ->get();
     return $query->result_array();
   }
 
-  public function get_data($tabel,$id_transaksi)
+  public function get_data($tabel,$Jidno)
   {
     $query = $this->db->select()
                       ->from($tabel)
-                      ->where($id_transaksi)
+                      ->where($Jidno)
                       ->get();
     return $query->result();
   }
@@ -53,10 +53,10 @@ class M_admin extends CI_Model
     $this->db->delete($tabel);
   }
 
-  public function mengurangi($tabel,$id_transaksi,$jumlah)
+  public function mengurangi($tabel,$Jidno,$User_Status)
   {
-    $this->db->set("jumlah","jumlah - $jumlah");
-    $this->db->where('id_transaksi',$id_transaksi);
+    $this->db->set("User_Status","User_Status - $User_Status");
+    $this->db->where('Jidno',$Jidno);
     $this->db->update($tabel);
   }
 

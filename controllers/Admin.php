@@ -1,6 +1,20 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+class Admin extends CI_Controller{
+
+  public function __construct(){
+		parent::__construct();
+    $this->load->model('M_admin');
+    $this->load->library('upload');
+	}
+
+  public function index(){
+    if($this->session->userdata('status') == 'login' && $this->session->userdata('role') == 1){
+      $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
+      $data['stokBarangMasuk'] = $this->M_admin->sum('tb_barang_masuk','User_Status ');
+      $data['stokBarangKeluar'] = $this->M_admin->sum('tb_barang_keluar','jumlah');      
+      $data['dataUser'] = $this->M_admin->numrows('user');
       $this->load->view('admin/index',$data);
     }else {
       $this->load->view('login/login');
@@ -259,18 +273,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     $this->load->view('admin/tabel/tabel_barangmasuk',$data);
   }
 
-  public function update_barang($id_transaksi)
+  public function update_barang($Jidno)
   {
-    $where = array('id_transaksi' => $id_transaksi);
+    $where = array('Jidno' => $Jidno);
     $data['data_barang_update'] = $this->M_admin->get_data('tb_barang_masuk',$where);
     $data['list_satuan'] = $this->M_admin->select('tb_satuan');
     $data['avatar'] = $this->M_admin->get_data_gambar('tb_upload_gambar_user',$this->session->userdata('name'));
     $this->load->view('admin/form_barangmasuk/form_update',$data);
   }
 
-  public function delete_barang($id_transaksi)
+  public function delete_barang($Jidno)
   {
-    $where = array('id_transaksi' => $id_transaksi);
+    $where = array('Jidno' => $Jidno);
     $this->M_admin->delete('tb_barang_masuk',$where);
     redirect(base_url('admin/tabel_barangmasuk'));
   }
@@ -279,29 +293,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   public function proses_databarang_masuk_insert()
   {
-    $this->form_validation->set_rules('lokasi','Lokasi','required');
-    $this->form_validation->set_rules('kode_barang','Kode Barang','required');
-    $this->form_validation->set_rules('nama_barang','Nama Barang','required');
-    $this->form_validation->set_rules('jumlah','Jumlah','required');
+    $this->form_validation->set_rules('Material_Desc','Material_Desc','required');
+    $this->form_validation->set_rules('Commit_Qty','Commit_Qty','required');
+    $this->form_validation->set_rules('WBS_Element','WBS_Element ','required');
+    $this->form_validation->set_rules('User_Status','User_Status','required');
 
     if($this->form_validation->run() == TRUE)
     {
-      $id_transaksi = $this->input->post('id_transaksi',TRUE);
-      $tanggal      = $this->input->post('tanggal',TRUE);
-      $lokasi       = $this->input->post('lokasi',TRUE);
-      $kode_barang  = $this->input->post('kode_barang',TRUE);
-      $nama_barang  = $this->input->post('nama_barang',TRUE);
-      $satuan       = $this->input->post('satuan',TRUE);
-      $jumlah       = $this->input->post('jumlah',TRUE);
+      $Jidno                 = $this->input->post('Jidno',TRUE);
+      $Material_Number       = $this->input->post('Material_Number',TRUE);
+      $Material_Desc         = $this->input->post('Material_Desc',TRUE);
+      $Commit_Qty            = $this->input->post('Commit_Qty',TRUE);
+      $WBS_Element           = $this->input->post('WBS_Element',TRUE);
+      $Actual_Start          = $this->input->post('Actual_Start',TRUE);
+      $User_Status           = $this->input->post('User_Status',TRUE);
 
       $data = array(
-            'id_transaksi' => $id_transaksi,
-            'tanggal'      => $tanggal,
-            'lokasi'       => $lokasi,
-            'kode_barang'  => $kode_barang,
-            'nama_barang'  => $nama_barang,
-            'satuan'       => $satuan,
-            'jumlah'       => $jumlah
+            'Jidno' => $Jidno,
+            'Material_Number'       => $Material_Number,
+            'Material_Desc'         => $Material_Desc,
+            'Commit_Qty'           => $Commit_Qty,
+            'WBS_Element'          => $WBS_Element,
+            'Actual_Start'         => $Actual_Start,
+            'User_Status'          => $User_Status
       );
       $this->M_admin->insert('tb_barang_masuk',$data);
 
@@ -315,30 +329,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
   public function proses_databarang_masuk_update()
   {
-    $this->form_validation->set_rules('lokasi','Lokasi','required');
-    $this->form_validation->set_rules('kode_barang','Kode Barang','required');
-    $this->form_validation->set_rules('nama_barang','Nama Barang','required');
-    $this->form_validation->set_rules('jumlah','Jumlah','required');
+    $this->form_validation->set_rules('Material_Desc','Material_Desc','required');
+    $this->form_validation->set_rules('Commit_Qty','Commit_Qty','required');
+    $this->form_validation->set_rules('WBS_Element','WBS_Element ','required');
+    $this->form_validation->set_rules('User_Status','User_Status','required');
 
     if($this->form_validation->run() == TRUE)
     {
-      $id_transaksi = $this->input->post('id_transaksi',TRUE);
-      $tanggal      = $this->input->post('tanggal',TRUE);
-      $lokasi       = $this->input->post('lokasi',TRUE);
-      $kode_barang  = $this->input->post('kode_barang',TRUE);
-      $nama_barang  = $this->input->post('nama_barang',TRUE);
-      $satuan       = $this->input->post('satuan',TRUE);
-      $jumlah       = $this->input->post('jumlah',TRUE);
+      $Jidno                 = $this->input->post('Jidno',TRUE);
+      $Material_Number       = $this->input->post('Material_Number',TRUE);
+      $Material_Desc         = $this->input->post('Material_Desc',TRUE);
+      $Commit_Qty            = $this->input->post('Commit_Qty',TRUE);
+      $WBS_Element           = $this->input->post('WBS_Element',TRUE);
+      $Actual_Start          = $this->input->post('Actual_Start',TRUE);
+      $User_Status           = $this->input->post('User_Status',TRUE);
 
-      $where = array('id_transaksi' => $id_transaksi);
+      $where = array('Jidno' => $Jidno);
       $data = array(
-            'id_transaksi' => $id_transaksi,
-            'tanggal'      => $tanggal,
-            'lokasi'       => $lokasi,
-            'kode_barang'  => $kode_barang,
-            'nama_barang'  => $nama_barang,
-            'satuan'       => $satuan,
-            'jumlah'       => $jumlah
+        'Jidno' => $Jidno,
+        'Material_Number'       => $Material_Number,
+        'Material_Desc'         => $Material_Desc,
+        'Commit_Qty'           => $Commit_Qty,
+        'WBS_Element'          => $WBS_Element,
+        'Actual_start'         => $Actual_Start,
+        'User_Status'          => $User_Status
       );
       $this->M_admin->update('tb_barang_masuk',$data,$where);
       $this->session->set_flashdata('msg_berhasil','Data Barang Berhasil Diupdate');
