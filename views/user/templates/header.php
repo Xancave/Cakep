@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>YtFlash</title>
+    <title>SPIRIT IPT</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url()?>/assets/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?= base_url()?>/assets/simple-sidebar/css/simple-sidebar.css">
@@ -51,7 +51,7 @@
     <nav class="navbar navbar-inverse navbar-fixed-top bg-dark">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="<?= base_url('user')?>">YtFlash</a>
+          <a class="navbar-brand" href="<?= base_url('user')?>">SPIRIT IPT</a>
         </div>
           <ul class="nav navbar-nav mr-auto">
             <!-- <li><a class="nav-link" href="#">Home</a></li> -->
