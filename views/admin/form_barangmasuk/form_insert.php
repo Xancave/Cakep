@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>scoding</title>
+  <title>SPIRIT IPT</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -39,7 +39,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>Y</b>t</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Yt</b>Flash</span>
+        <span class="logo-lg"><b>SPIRIT</b>IPT</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top">
@@ -214,7 +214,7 @@
                     <div class="box-body">
                       <div class="form-group">
                         <label for="id_transaksi" style="margin-left:220px;display:inline;">ID Transaksi</label>
-                        <input type="text" name="id_transaksi" style="margin-left:37px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?= random_string('numeric', 8); ?>">
+                        <input type="text" name="id_transaksi" style="margin-left:37px;width:20%;display:inline;" class="form-control" readonly="readonly" value="WG-<?= date("Y"); ?><?= random_string('numeric', 8); ?>">
                       </div>
                       <div class="form-group">
                         <label for="tanggal" style="margin-left:220px;display:inline;">Tanggal</label>

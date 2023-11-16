@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SCODING</title>
+  <title>SPIRIT IPT</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -49,7 +49,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>Y</b>t</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>SC</b>coook</span>
+        <span class="logo-lg"><b>SPIRIT</b>IPT</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top">
@@ -93,7 +93,7 @@
                     <a href="#">Friends</a>
                   </div>
                 </div>
-                <!-- /.row -->
+                <-- /.row -->
             </li>
             <!-- Menu Footer-->
             <li class="user-footer">
