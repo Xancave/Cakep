@@ -4,13 +4,15 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>scoding</title>
+  <title>SPIRIT IPT</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/web_admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="<?php echo base_url() ?>assets/web_admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?php echo base_url() ?>assets/web_admin/bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet"
+    href="<?php echo base_url() ?>assets/web_admin/bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="<?php echo base_url() ?>assets/web_admin/bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
@@ -27,7 +29,8 @@
   <![endif]-->
 
   <!-- Google Font -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -39,7 +42,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>Y</b>t</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg"><b>Yt</b>Flash</span>
+        <span class="logo-lg"><b>SPIRIT</b>IPT</span>
       </a>
       <!-- Header Navbar: style can be found in header.less -->
       <nav class="navbar navbar-static-top">
@@ -57,20 +60,26 @@
             <li class="dropdown user user-menu">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <?php foreach ($avatar as $a) { ?>
-                  <img src="<?php echo base_url('assets/upload/user/img/' . $a->nama_file) ?>" class="user-image" alt="User Image">
+                  <img src="<?php echo base_url('assets/upload/user/img/' . $a->nama_file) ?>" class="user-image"
+                    alt="User Image">
                 <?php } ?>
-                <span class="hidden-xs"><?= $this->session->userdata('name') ?></span>
+                <span class="hidden-xs">
+                  <?= $this->session->userdata('name') ?>
+                </span>
               </a>
               <ul class="dropdown-menu">
                 <!-- User image -->
                 <li class="user-header">
                   <?php foreach ($avatar as $a) { ?>
-                    <img src="<?php echo base_url('assets/upload/user/img/' . $a->nama_file) ?>" class="img-circle" alt="User Image">
+                    <img src="<?php echo base_url('assets/upload/user/img/' . $a->nama_file) ?>" class="img-circle"
+                      alt="User Image">
                   <?php } ?>
 
                   <p>
                     <?= $this->session->userdata('name') ?> - Web Developer
-                    <small>Last Login: <?= $this->session->userdata('last_login') ?></small>
+                    <small>Last Login:
+                      <?= $this->session->userdata('last_login') ?>
+                    </small>
                   </p>
                 </li>
                 <!-- Menu Body -->
@@ -78,10 +87,12 @@
                 <!-- Menu Footer-->
                 <li class="user-footer">
                   <div class="pull-left">
-                    <a href="<?= base_url('admin/profile') ?>" class="btn btn-default btn-flat"><i class="fa fa-cogs" aria-hidden="true"></i> Profile</a>
+                    <a href="<?= base_url('admin/profile') ?>" class="btn btn-default btn-flat"><i class="fa fa-cogs"
+                        aria-hidden="true"></i> Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="<?= base_url('admin/sigout') ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out" aria-hidden="true"></i> Sign out</a>
+                    <a href="<?= base_url('admin/sigout') ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"
+                        aria-hidden="true"></i> Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -100,11 +111,14 @@
         <div class="user-panel">
           <div class="pull-left image">
             <?php foreach ($avatar as $a) { ?>
-              <img src="<?php echo base_url('assets/upload/user/img/' . $a->nama_file) ?>" class="img-circle" alt="User Image">
+              <img src="<?php echo base_url('assets/upload/user/img/' . $a->nama_file) ?>" class="img-circle"
+                alt="User Image">
             <?php } ?>
           </div>
           <div class="pull-left info">
-            <p><?= $this->session->userdata('name') ?></p>
+            <p>
+              <?= $this->session->userdata('name') ?>
+            </p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
           </div>
         </div>
@@ -135,8 +149,10 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li class="active"><a href="<?= base_url('admin/form_barangmasuk') ?>"><i class="fa fa-circle-o"></i> Tambah Data Barang Masuk</a></li>
-              <li><a href="<?= base_url('admin/form_satuan') ?>"><i class="fa fa-circle-o"></i> Tambah Satuan Barang</a></li>
+              <li class="active"><a href="<?= base_url('admin/form_barangmasuk') ?>"><i class="fa fa-circle-o"></i>
+                  Tambah Data</a></li>
+              <li><a href="<?= base_url('admin/form_satuan') ?>"><i class="fa fa-circle-o"></i>Tambah Operasi</a>
+              </li>
             </ul>
           </li>
           <li class="treeview ">
@@ -147,8 +163,10 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="<?= base_url('admin/tabel_barangmasuk') ?>"><i class="fa fa-circle-o"></i> Tabel Barang Masuk</a></li>
-              <li><a href="<?= base_url('admin/tabel_barangkeluar') ?>"><i class="fa fa-circle-o"></i> Tabel Barang Keluar</a></li>
+              <li><a href="<?= base_url('admin/tabel_barangmasuk') ?>"><i class="fa fa-circle-o"></i> Tabel Barang
+                  Masuk</a></li>
+              <li><a href="<?= base_url('admin/tabel_barangkeluar') ?>"><i class="fa fa-circle-o"></i> Tabel Barang
+                  Keluar</a></li>
               <li><a href="<?= base_url('admin/tabel_satuan') ?>"><i class="fa fa-circle-o"></i> Tabel Satuan</a></li>
             </ul>
           </li>
@@ -172,12 +190,12 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Input Data Barang Masuk
+          Input Data Barang
         </h1>
         <ol class="breadcrumb">
           <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
           <li><a href="#">Forms</a></li>
-          <li class="active">Data Barang Masuk</li>
+          <li class="active">Input Data Barang </li>
         </ol>
       </section>
 
@@ -190,7 +208,7 @@
               <!-- general form elements -->
               <div class="box box-primary" style="width:94%;">
                 <div class="box-header with-border">
-                  <h3 class="box-title"><i class="fa fa-archive" aria-hidden="true"></i> Tambah Data Barang Masuk</h3>
+                  <h3 class="box-title"><i class="fa fa-archive" aria-hidden="true"></i> Tambah Data Barang</h3>
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
@@ -200,29 +218,28 @@
                     <?php if ($this->session->flashdata('msg_berhasil')) { ?>
                       <div class="alert alert-success alert-dismissible" style="width:91%">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Success!</strong><br> <?php echo $this->session->flashdata('msg_berhasil'); ?>
+                        <strong>Success!</strong><br>
+                        <?php echo $this->session->flashdata('msg_berhasil'); ?>
                       </div>
                     <?php } ?>
 
                     <?php if (validation_errors()) { ?>
                       <div class="alert alert-warning alert-dismissible">
                         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                        <strong>Warning!</strong><br> <?php echo validation_errors(); ?>
+                        <strong>Warning!</strong><br>
+                        <?php echo validation_errors(); ?>
                       </div>
                     <?php } ?>
 
                     <div class="box-body">
                       <div class="form-group">
-                        <label for="Jidno" style="margin-left:220px;display:inline;">ID Transaksi</label>
-                        <input type="text" name="Jidno" style="margin-left:37px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?= random_string('numeric', 8); ?>">
+                        <label for="JidNo" style="margin-left:220px;display:inline;">JidNo</label>
+                        <input type="text" name="JidNo" style="margin-left:77px;width:20%;display:inline;"
+                          class="form-control" readonly="readonly" value="20<?= random_string('numeric', 6); ?>">
                       </div>
                       <div class="form-group">
-                        <label for="Material_Number" style="margin-left:220px;display:inline;">Tanggal</label>
-                        <input type="text" name="Material_Number" style="margin-left:66px;width:20%;display:inline;" class="form-control form_datetime" placeholder="Klik Disini" autocomplete="off">
-                      </div>
-                      <div class="form-group" style="margin-bottom:40px;">
-                        <label for="Material_Desc" style="margin-left:220px;display:inline;">Lokasi</label>
-                        <select class="form-control" name="Material_Desc" style="margin-left:75px;width:20%;display:inline;">
+                        <label for="Material_Description" style="margin-left:220px;display:inline;">Material</label>
+                        <select class="form-control" name="Material_Description" style="margin-left:62px;width:20%;display:inline;">
                           <option value="">-- Pilih --</option>
                           <option value="Aceh">Aceh</option>
                           <option value="Bali">Bali</option>
@@ -257,35 +274,62 @@
                           <option value="Bangka">Bangka Belitung</option>
                         </select>
                       </div>
-                      <div class="form-group" style="display:inline-block;">
-                        <label for="Commit_Qty" style="width:87%;margin-left: 12px;">Kode Barang / Barcode</label>
-                        <input type="text" name="Commit_Qty" style="width: 90%;margin-right: 67px;margin-left: 11px;" class="form-control" id="kode_barang" placeholder="Kode Barang">
+                      <div class="form-group">
+                        <label for="User_Status" style="margin-left:220px;display:inline;">Status</label>
+                        <input type="text" name="User_Status" style="margin-left:73px;width:20%;display:inline;"
+                          class="form-control" readonly="readonly" value="Work In Progress">
+                      </div>
+                      <div class="form-group">
+                        <label for="WBS_Element" style="margin-left:220px;display:inline;">WBS_Element</label>
+                        <select class="form-control" name="WBS_Element"
+                          style="margin-left:27px;width:20%;display:inline;">
+                          <option value="">-- Pilih --</option>
+                          <option value="Y/F@@">Y/F@@</option>
+                          <option value="Y/A@@">Y/A@@</option>
+                          <option value="Y/F@@">Y/Z@@</option>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label for="Committed_Qty" style="margin-left:220px;display:inline;">Jumlah</label>
+                        <input type="number" name="Committed_Qty" style="margin-left:67px;width:20%;display:inline;"
+                          class="form-control" id="Committed_Qty">
                       </div>
                       <div class="form-group" style="display:inline-block;">
-                        <label for="WBS_Element" style="width:73%;">Nama Barang</label>
-                        <input type="text" name="WBS_Element" style="width:90%;margin-right: 67px;" class="form-control" id="nama_Barang" placeholder="Nama Barang">
+                        <label for="Actual_StartDate" style="width:87%;margin-left: 12px;">Tanggal Dibuat</label>
+                        <input type="text" name="Actual_StartDate" style="width: 90%;margin-right: 67px;margin-left: 11px;"
+                          class="form-control form_datetime" placeholder="Klik Disini" autocomplete="off">
                       </div>
                       <div class="form-group" style="display:inline-block;">
-                        <label for="Actual_Start" style="width:73%;">Satuan</label>
-                        <select class="form-control" name="Actual_Start" style="width:110%;margin-right: 18px;">
+                        <label for="Actual_FinishDate" style="width:87%;margin-left: 12px;">Tanggal Selesai</label>
+                        <input type="text" name="Actual_FinishDate" style="width: 90%;margin-right: 67px;margin-left: 11px;"
+                          class="form-control form_datetime" placeholder="Klik Disini" autocomplete="off">
+                      </div>
+                      <div class="form-group" style="display:inline-block;">
+                        <label for="Operasi" style="width:73%;">Operasi</label>
+                        <select class="form-control" name="Operasi" style="width:80%;margin-right: 18px;">
                           <option value="" selected="">-- Pilih --</option>
                           <?php foreach ($list_satuan as $s) { ?>
-                            <option value="<?= $s->kode_satuan ?>"><?= $s->nama_satuan ?></option>
+                            <option value="<?= $s->kode_satuan ?>">
+                              <?= $s->nama_satuan ?>
+                            </option>
                           <?php } ?>
                         </select>
                       </div>
                       <div class="form-group" style="display:inline-block;">
-                        <label for="User_Status" style="width:73%;margin-left:33px;">Jumlah</label>
-                        <input type="number" name="User_Status" style="width:41%;margin-left:34px;margin-right:18px;" class="form-control" id="jumlah">
-                      </div>
-                      <div class="form-group" style="display:inline-block;">
-                        <button type="reset" class="btn btn-basic" name="btn_reset" style="width:95px;margin-left:-70px;"><i class="fa fa-eraser" aria-hidden="true"></i> Reset</button>
+                        <button type="reset" class="btn btn-basic" name="btn_reset"
+                          style="width:95px;margin-left:-20px;"><i class="fa fa-eraser" aria-hidden="true"></i>
+                          Reset</button>
                       </div>
                       <!-- /.box-body -->
                       <div class="box-footer" style="width:93%;">
-                        <a type="button" class="btn btn-default" style="width:10%;margin-right:26%" onclick="history.back(-1)" name="btn_kembali"><i class="fa fa-arrow-left" aria-hidden="true"></i> Kembali</a>
-                        <a type="button" class="btn btn-info" style="width:14%;margin-right:29%" href="<?= base_url('admin/tabel_barangmasuk') ?>" name="btn_listbarang"><i class="fa fa-table" aria-hidden="true"></i> Lihat List Barang</a>
-                        <button type="submit" style="width:20%" class="btn btn-success"><i class="fa fa-check" aria-hidden="true"></i> Submit</button>
+                        <a type="button" class="btn btn-default" style="width:10%;margin-right:26%"
+                          onclick="history.back(-1)" name="btn_kembali"><i class="fa fa-arrow-left"
+                            aria-hidden="true"></i> Kembali</a>
+                        <a type="button" class="btn btn-info" style="width:14%;margin-right:29%"
+                          href="<?= base_url('admin/tabel_barangmasuk') ?>" name="btn_listbarang"><i class="fa fa-table"
+                            aria-hidden="true"></i> Lihat List Barang</a>
+                        <button type="submit" style="width:20%" class="btn btn-success"><i class="fa fa-check"
+                            aria-hidden="true"></i> Submit</button>
                       </div>
                   </form>
                 </div>
@@ -307,7 +351,7 @@
             <!--/.col (left) -->
             <!-- right column -->
             <!-- <div class="col-md-6">
-          <!-- Horizontal Form -->
+          <-- Horizontal Form -->
 
             <!-- /.box -->
             <!-- general form elements disabled -->
@@ -327,7 +371,9 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; <?= date('Y') ?></strong>
+    <strong>Copyright &copy;
+      <?= date('Y') ?>
+    </strong>
   </footer>
 
   <!-- Control Sidebar -->

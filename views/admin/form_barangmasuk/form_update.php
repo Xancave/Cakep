@@ -204,17 +204,17 @@
               <div class="box-body">
                 <div class="form-group">
                   <?php foreach($data_barang_update as $d){ ?>
-                  <label for="Jidno" style="margin-left:220px;display:inline;">ID Transaksi</label>
-                  <input type="text" name="Jidno" style="margin-left:37px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->Jidno?>">
+                  <label for="id_transaksi" style="margin-left:220px;display:inline;">ID Transaksi</label>
+                  <input type="text" name="id_transaksi" style="margin-left:37px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->id_transaksi?>">
                 </div>
                 <div class="form-group">
-                  <label for="Material_Number" style="margin-left:220px;display:inline;">Tanggal</label>
-                  <input type="text" name="Material_Number" style="margin-left:66px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->Material_Number?>">
+                  <label for="tanggal" style="margin-left:220px;display:inline;">Tanggal</label>
+                  <input type="text" name="tanggal" style="margin-left:66px;width:20%;display:inline;" class="form-control" readonly="readonly" value="<?=$d->tanggal?>">
                 </div>
                 <div class="form-group" style="margin-bottom:40px;">
-                  <label for="Material_Desc" style="margin-left:220px;display:inline;">Lokasi</label>
-                  <select class="form-control" name="Material_Desc" style="margin-left:75px;width:20%;display:inline;">
-                    <option value="<?=$d->Material_Desc?>"><?=$d->Material_Desc?></option>
+                  <label for="nama_barang" style="margin-left:220px;display:inline;">Lokasi</label>
+                  <select class="form-control" name="lokasi" style="margin-left:75px;width:20%;display:inline;">
+                    <option value="<?=$d->lokasi?>"><?=$d->lokasi?></option>
                     <option value="">-- Pilih --</option>
                     <option value="Aceh">Aceh</option>
                     <option value="Bali">Bali</option>
@@ -249,16 +249,16 @@
                   </select>
                 </div>
                 <div class="form-group" style="display:inline-block;">
-                  <label for="Commit_Qty" style="width:87%;margin-left: 12px;">Kode Barang / Barcode</label>
-                  <input type="text" name="Commit_Qty" required style="width: 90%;margin-right: 67px;margin-left: 11px;" class="form-control" id="kode_barang" value="<?=$d->Commit_Qty?>">
+                  <label for="kode_barang" style="width:87%;margin-left: 12px;">Kode Barang / Barcode</label>
+                  <input type="text" name="kode_barang" required style="width: 90%;margin-right: 67px;margin-left: 11px;" class="form-control" id="kode_barang" value="<?=$d->kode_barang?>">
                 </div>
                 <div class="form-group" style="display:inline-block;">
-                  <label for="WBS_Element" style="width:73%;">Nama Barang</label>
-                  <input type="text" name="WBS_Element" required style="width:90%;margin-right: 67px;" class="form-control" id="nama_Barang" value="<?=$d->WBS_Element?>">
+                  <label for="nama_Barang" style="width:73%;">Nama Barang</label>
+                  <input type="text" name="nama_barang" required style="width:90%;margin-right: 67px;" class="form-control" id="nama_Barang" value="<?=$d->nama_barang?>">
               </div>
                 <div class="form-group" style="display:inline-block;">
-                  <label for="Actual_Start" style="width:73%;">Satuan</label>
-                  <select class="form-control" name="Actual_Start" style="width:110%;margin-right: 18px;">
+                  <label for="satuan" style="width:73%;">Satuan</label>
+                  <select class="form-control" name="satuan" style="width:110%;margin-right: 18px;">
                     <?php foreach($list_satuan as $s){?>
                       <?php if($d->satuan == $s->nama_satuan){?>
                     <option value="<?=$d->satuan?>" selected=""><?=$d->satuan?></option>
@@ -269,8 +269,8 @@
                   </select>
               </div>
               <div class="form-group" style="display:inline-block;">
-                <label for="User_Status" style="width:73%;margin-left:33px;">Jumlah</label>
-                <input type="number" name="User_Status" style="width:41%;margin-left:34px;margin-right:18px;" class="form-control" id="jumlah" value="<?=$d->User_Status?>">
+                <label for="jumlah" style="width:73%;margin-left:33px;">Jumlah</label>
+                <input type="number" name="jumlah" style="width:41%;margin-left:34px;margin-right:18px;" class="form-control" id="jumlah" value="<?=$d->jumlah?>">
             </div>
             <?php } ?>
               <!-- /.box-body -->
