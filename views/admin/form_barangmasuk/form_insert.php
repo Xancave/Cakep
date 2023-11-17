@@ -86,10 +86,6 @@
 
                 <!-- Menu Footer-->
                 <li class="user-footer">
-                  <div class="pull-left">
-                    <a href="<?= base_url('admin/profile') ?>" class="btn btn-default btn-flat"><i class="fa fa-cogs"
-                        aria-hidden="true"></i> Profile</a>
-                  </div>
                   <div class="pull-right">
                     <a href="<?= base_url('admin/sigout') ?>" class="btn btn-default btn-flat"><i class="fa fa-sign-out"
                         aria-hidden="true"></i> Sign out</a>
@@ -174,7 +170,7 @@
           <li class="header">LABELS</li>
           <li>
             <a href="<?php echo base_url('admin/profile') ?>">
-              <i class="fa fa-cogs" aria-hidden="true"></i> <span>Profile</span></a>
+              <i class="fa fa-cogs" aria-hidden="true"></i> <span>User Guide</span></a>
           </li>
           <li>
             <a href="<?php echo base_url('admin/users') ?>">
@@ -233,13 +229,14 @@
 
                     <div class="box-body">
                       <div class="form-group">
-                        <label for="JidNo" style="margin-left:220px;display:inline;">JidNo</label>
-                        <input type="text" name="JidNo" style="margin-left:77px;width:20%;display:inline;"
+                        <label for="Jidno" style="margin-left:220px;display:inline;">JidNo</label>
+                        <input type="text" name="Jidno" style="margin-left:77px;width:20%;display:inline;"
                           class="form-control" readonly="readonly" value="20<?= random_string('numeric', 6); ?>">
                       </div>
                       <div class="form-group">
-                        <label for="Material_Description" style="margin-left:220px;display:inline;">Material</label>
-                        <select class="form-control" name="Material_Description" style="margin-left:62px;width:20%;display:inline;">
+                        <label for="Material_Desc" style="margin-left:220px;display:inline;">Material</label>
+                        <select class="form-control" name="Material_Desc"
+                          style="margin-left:62px;width:20%;display:inline;">
                           <option value="">-- Pilih --</option>
                           <option value="Aceh">Aceh</option>
                           <option value="Bali">Bali</option>
@@ -290,23 +287,23 @@
                         </select>
                       </div>
                       <div class="form-group">
-                        <label for="Committed_Qty" style="margin-left:220px;display:inline;">Jumlah</label>
-                        <input type="number" name="Committed_Qty" style="margin-left:67px;width:20%;display:inline;"
-                          class="form-control" id="Committed_Qty">
+                        <label for="Commit_Qty" style="margin-left:220px;display:inline;">Jumlah</label>
+                        <input type="number" name="Commit_Qty" style="margin-left:67px;width:20%;display:inline;"
+                          class="form-control" id="Commit_Qty">
                       </div>
                       <div class="form-group" style="display:inline-block;">
-                        <label for="Actual_StartDate" style="width:87%;margin-left: 12px;">Tanggal Dibuat</label>
-                        <input type="text" name="Actual_StartDate" style="width: 90%;margin-right: 67px;margin-left: 11px;"
+                        <label for="Actual_Start" style="width:87%;margin-left: 12px;">Tanggal Dibuat</label>
+                        <input type="text" name="Actual_Start" style="width: 90%;margin-right: 67px;margin-left: 11px;"
                           class="form-control form_datetime" placeholder="Klik Disini" autocomplete="off">
                       </div>
-                      <div class="form-group" style="display:inline-block;">
+                      <!-- <div class="form-group" style="display:inline-block;">
                         <label for="Actual_FinishDate" style="width:87%;margin-left: 12px;">Tanggal Selesai</label>
                         <input type="text" name="Actual_FinishDate" style="width: 90%;margin-right: 67px;margin-left: 11px;"
                           class="form-control form_datetime" placeholder="Klik Disini" autocomplete="off">
-                      </div>
+                      </div> -->
                       <div class="form-group" style="display:inline-block;">
-                        <label for="Operasi" style="width:73%;">Operasi</label>
-                        <select class="form-control" name="Operasi" style="width:80%;margin-right: 18px;">
+                        <label for="Material_Number" style="width:73%;">Operasi</label>
+                        <select class="form-control" name="Material_Number" style="width:80%;margin-right: 18px;">
                           <option value="" selected="">-- Pilih --</option>
                           <?php foreach ($list_satuan as $s) { ?>
                             <option value="<?= $s->kode_satuan ?>">

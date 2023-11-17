@@ -136,8 +136,8 @@
                 </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?= base_url('admin/form_barangmasuk')?>"><i class="fa fa-circle-o"></i> Tambah Data Barang Masuk</a></li>
-            <li><a href="<?= base_url('admin/form_satuan')?>"><i class="fa fa-circle-o"></i> Tambah Satuan Barang</a></li>
+            <li><a href="<?= base_url('admin/form_barangmasuk')?>"><i class="fa fa-circle-o"></i> Tambah Data</a></li>
+            <li><a href="<?= base_url('admin/form_satuan')?>"><i class="fa fa-circle-o"></i> Tambah Operasi</a></li>
           </ul>
         </li>
         <li class="treeview active">
@@ -148,9 +148,9 @@
                 </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?= base_url('admin/tabel_barangmasuk')?>"><i class="fa fa-circle-o"></i> Tabel Barang Masuk</a></li>
-            <li><a href="<?= base_url('admin/tabel_barangkeluar')?>"><i class="fa fa-circle-o"></i> Tabel Barang Keluar</a></li>
-            <li class="active"><a href="<?= base_url('admin/tabel_satuan')?>"><i class="fa fa-circle-o"></i> Tabel Satuan</a></li>
+            <li><a href="<?= base_url('admin/tabel_barangmasuk')?>"><i class="fa fa-circle-o"></i> Tabel Data Produksi</a></li>
+            <li><a href="<?= base_url('admin/tabel_barangkeluar')?>"><i class="fa fa-circle-o"></i> Tabel Status Part</a></li>
+            <li class="active"><a href="<?= base_url('admin/tabel_satuan')?>"><i class="fa fa-circle-o"></i> Tabel Operasi Pekerjaan</a></li>
           </ul>
         </li>
         <li>
@@ -173,12 +173,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tabel Satuan
+        Tabel Operasi Pekerjaan
       </h1>
       <ol class="breadcrumb">
         <li><a href="<?=base_url('admin')?>"><i class="fa fa-dashboard"></i> Home</a></li>
         <li>Tables</li>
-        <li class="active"><a href="<?=base_url('admin/tabel_satuan')?>">Tabel Satuan</a></li>
+        <li class="active"><a href="<?=base_url('admin/tabel_satuan')?>">Tabel Operasi Pekerjaan</a></li>
       </ol>
     </section>
 
@@ -190,7 +190,7 @@
           <!-- /.box -->
           <div class="box">
             <div class="box-header">
-              <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Stok Barang Masuk</h3>
+              <h3 class="box-title"><i class="fa fa-table" aria-hidden="true"></i> Operasi Pekerjaan</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -202,13 +202,13 @@
                </div>
               <?php } ?>
 
-              <a href="<?=base_url('admin/form_satuan')?>" style="margin-bottom:10px;" type="button" class="btn btn-primary" name="tambah_data"><i class="fa fa-plus-circle" aria-hidden="true"></i> Tambah Data</a>
+              <a href="<?=base_url('admin/form_satuan')?>" style="margin-bottom:10px;" type="button" class="btn btn-primary" name="tambah_data"><i class="fa fa-plus-circle" aria-hidden="true"></i>Tambah Operasi</a>
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Kode Satuan</th>
-                  <th>Nama Satuan</th>
+                  <th>Opr</th>
+                  <th>Work Center</th>
                   <th>Update</th>
                   <th>Delete</th>
                 </tr>
@@ -233,8 +233,8 @@
                 <tfoot>
                 <tr>
                   <th>No</th>
-                  <th>Kode Satuan</th>
-                  <th>Nama Satuan</th>
+                  <th>Opr</th>
+                  <th>Work Center</th>
                 </tr>
                 </tfoot>
               </table>
